@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Voor didactisch gebruik aangepast door Robbe Wulgaert, Sint-Lievenscollege Gent. Niet verspreiden zonder naamsvermelding -->
+    <!-- robbewulgaert.be -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Bella</title>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet'>
+    <!-- Externe CSS-bestand -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Inclusie van p5.js en ml5.js -->
+    <script src="p5.min.js"></script>
+    <script src="ml5.min.js"></script>
+    <!-- Inclusie van je sketch.js -->
+    <script src="sketch.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="logoSLC">
+        <!-- Voor didactisch gebruik aangepast door Robbe Wulgaert, Sint-Lievenscollege Gent. Niet verspreiden zonder naamsvermelding -->
+        <!-- robbewulgaert.be -->
+    </div>
+    <!-- Code voor de iPhone-mock-up -->
+    <div class="container">
+        <div class="iphone">
+            <!-- De bestaande code van de iPhone mock-up blijft ongewijzigd -->
+            <div class="buttons">
+                <div class="silent"></div>
+                <div class="sleep"></div>
+                <div class="vol-up"></div>
+                <div class="vol-down"></div>
+            </div>
+            <div class="top">
+                <div class="black-bar"></div>
+                <div class="iphone-top"></div>
+            </div>
+            <div class="components">
+                <div class="speaker"></div>
+                <div class="camera">
+                    <div class="shine-left"></div>
+                    <div class="shine-right"></div>
+                </div>
+            </div>
+            <div class="top-bar"></div>
+            <div class="bottom-bar"></div>
+            <div class="screen">
+                <!-- De video loop blijft behouden -->
+                <video loop="loop" autoplay="autoplay" muted="muted">
+                    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1116884/iphone-vid.mp4" type="video/mp4" />
+                </video>
+                <div class="AIapp">
+                    <h1><b>Baking Bella</b></h1>
+                    <!-- Het canvas wordt hier door p5.js geplaatst -->
+                    <div id="canvasContainer"></div>
+                    <!-- Inferentielabels -->
+                    <div id="labelContainer">
+                        <p id="resultLabel"></p>
+                        <p id="confidenceLabel"></p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="battery">
+                    <div class="nub"></div>
+                    <div class="energy"></div>
+                </div>
+                <div class="lock-bar"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Goo-filter voor de notch-vorm -->
+    <svg viewbox="0 0 0 0" height="0" width="0">
+        <filter id="goo" color-interpolation-filters="sRGB">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix"
+                values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1" result="cm"></feColorMatrix>
+            <feBlend in="SourceGraphic" in2="cm"></feBlend>
+        </filter>
+    </svg>
+    <!-- Verwijder onnodige scripts -->
+    <!--
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://codepen.io/ryanzola/pen/qePagj.js'></script>
+    <script src="./script.js"></script>
+    -->
+    <div class="uitleg">
+        <h1>Baking Bella</h1>
+        <!-- Plaats de knop hier -->
+        <button id="connectButton">Integreer</button>
+        <!-- De lijst met classificaties -->
+        <h2>Bloem</h2>
+<h2>Boter</h2>
+<h2>Cacao</h2>
+<h2>Chocolade</h2>
+<h2>Eieren</h2>
+<h2>Melk</h2>
+<h2>Slagroom</h2>
+<h2>Suiker</h2>
+<h2>Water</h2>
+<h2>Zout</h2>
+        <p>
+            . <br>
+            .<br>
+            . <br>
+            Jacob Content en Lucas van Rentergem) <br>
+            voor zijn vak 'AI & Design Thinking.<br><br>
+            .
+        </p>
+    </div>
+    <!-- Voor didactisch gebruik aangepast door Robbe Wulgaert, Sint-Lievenscollege Gent. Niet verspreiden zonder naamsvermelding -->
+    <!-- robbewulgaert.be -->
+</body>
+
+</html>

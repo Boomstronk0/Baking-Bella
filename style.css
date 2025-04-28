@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+html {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #EAEAEA;
+}
+
+.logoSLC {
+    position: absolute;
+    height: 10%;
+    width: 50%;
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uitleg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.uitleg h1 {
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.uitleg h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.uitleg p {
+  font-size: 20px;
+}
+
+.iphone {
+  position: relative;
+  height: 875px;
+  width: 423px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  border: 5px solid #3D3D3D;
+  border-radius: 50px;
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2),
+              0 0 0 1px #999,
+              0 0 30px 0px rgba(0, 0, 0, 0.7);
+  transform: scale(0.6);
+}
+
+.iphone .buttons .silent,
+.iphone .buttons .vol-up,
+.iphone .buttons .vol-down,
+.iphone .buttons .sleep {
+  background: #111;
+  position: absolute;
+  border-radius: 2px;
+}
+
+.iphone .buttons .silent {
+  height: 40px;
+  width: 3px;
+  top: 100px;
+  left: -8px;
+}
+
+.iphone .buttons .vol-up,
+.iphone .buttons .vol-down {
+  left: -8px;
+  height: 60px;
+  width: 4px;
+}
+
+.iphone .buttons .vol-up {
+  top: 170px;
+}
+
+.iphone .buttons .vol-down {
+  top: 250px;
+}
+
+.iphone .buttons .sleep {
+  left: auto;
+  right: -8px;
+  top: 180px;
+  height: 100px;
+  width: 4px;
+  border-radius: 0 2px 2px 0;
+}
+
+.iphone .top {
+  position: absolute;
+  top: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+  filter: url("#goo");
+}
+
+.iphone .top .black-bar {
+  position: absolute;
+  height: 1px;
+  width: 70%;
+  padding-top: 2px;
+  background: #111;
+}
+
+.iphone .top .iphone-top {
+  position: relative;
+  height: 40px;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+  background: #111;
+  z-index: 2;
+}
+
+.iphone .components {
+  position: absolute;
+  top: 20px;
+  padding-left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iphone .components .speaker {
+  height: 6px;
+  width: 70px;
+  margin: 0 30px;
+  border-radius: 6px;
+  border-bottom: 1px solid #333;
+  background: #222;
+  z-index: 100;
+}
+
+.iphone .components .camera {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border-bottom: 1px solid #444;
+  background: radial-gradient(black, #333);
+  opacity: 0.5;
+  z-index: 4;
+}
+
+.iphone .components .camera .shine-left {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  margin: 2px;
+  border-left: 4px solid dodgerblue;
+  background: black;
+  border-radius: 50%;
+  filter: blur(1.8px);
+}
+
+.iphone .components .camera .shine-left::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  height: 8px;
+  width: 8px;
+  border-right: 2px solid white;
+  border-radius: 4px;
+}
+
+.iphone .top-bar,
+.iphone .bottom-bar {
+  position: absolute;
+  left: -5px;
+  height: 15px;
+  width: 423px;
+  border-left: 5px solid #111;
+  border-right: 5px solid #111;
+}
+
+.iphone .top-bar {
+  top: 65px;
+}
+
+.iphone .bottom-bar {
+  bottom: 65px;
+}
+
+.iphone .screen {
+  position: absolute;
+  height: calc(100% - 12px);
+  width: calc(100% - 12px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(0, 0, 0, 0.9);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.iphone .screen video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.iphone .AIapp {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+#connectButton {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#connectButton:hover {
+  background-color: #0056b3;
+}
+
+.AIapp main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Styling voor de knop */
+#connectButton {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #5200ff; /* Kleur aangepast */
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#connectButton:hover {
+  background-color: #3d00cc; /* Donkerdere tint bij hover */
+}
+
+/* Styling voor het canvas en labels binnen de mock-up */
+.AIapp {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Canvas styling */
+#canvasContainer {
+  margin: 0 auto;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Styling voor de inferentielabels */
+#labelContainer {
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparante witte achtergrond */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+#labelContainer p {
+  color: #000; /* Zwarte tekstkleur */
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* Video styling */
+.iphone .screen video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Media query voor kleinere schermen */
+@media screen and (max-height: 500px) {
+  .iphone {
+    transform: scale(0.35);
+  }
+}
